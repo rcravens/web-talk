@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+<!--
+	Copyright (c) 2010 Bob Cravens, http://bobcravens.com/ 
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+	<!-- Enter a title. This shows up on the browser tab. -->
+	<title>WebTalk</title>
+	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<meta name="author" content="Bob Cravens" />
+	
+    <link href="css/webtalk.css" rel="stylesheet" type="text/css" /> 
+	<link type="image/png" href="images/author_icon.png" rel="shortcut icon" /> 
+	<link type="text/css" rel="stylesheet" href="scripts/SyntaxHighlighter/Styles/shCore.css"></link> 
+	<link type="text/css" rel="stylesheet" href="scripts/SyntaxHighlighter/Styles/shThemeDefault.css"></link> 
+
+	<script type="text/javascript" src="scripts/jquery.js"></script> 
+	<script type="text/javascript" src="scripts/jquery.color.js"></script>
+	<script type="text/javascript" src="scripts/jquery.hashchange.js"></script>
+	<script type="text/javascript" src="scripts/webtalk.js"></script> 
+</head> 
+<body> 
+	<div id="mask" class="mask"></div>
+	<div id="page-wrap" class="page-width rounded">
+		
+		<!-- Previous / Next Buttons  -->
+		<div class="overlay" style="left:-48px; top:44px;">
+			<a id="prevSlide" href="#">Previous Slide</a>
+		</div>
+		<div class="overlay" style="left:900px; top:44px;">
+			<a id="nextSlide" href="#">Next Slide</a>
+		</div>
+		<!-- TOC Button and slide list -->
+		<div class="overlay" style="left:400px; top:-10px;">
+			<a id="toc" href="#">TOC</a>
+		</div>
+		<div id="slide-list"></div>
+		
+		<!-- Set the title bar color: gold, blue, or green. -->
+		<div id="title" class="rounded-top gold">
+			<!-- Set the title. -->
+			<span id="webtalk-title" class="left"></span>
+			<!-- Set the sub-title. -->
+			<span id="webtalk-subtitle" class="right"></span>
+		</div>
+		
+		<div id="content" class="clear">
+			<!-- Content is dynamically loaded -->
+		</div>
+	</div>
+	
+	<div id="footer" class="page-width align-center">
+		<p class="left">
+			This work is licensed under <a rel="license" href="license.txt">dual MIT/GPL licenses</a>.
+		</p>
+		<p class="right">
+			Created using <a href="http://bobcravens.com/presos/webtalk/" target="_blank">Web Talk</a>.
+		</p>
+		<div class="clear"></div>
+	</div>
+	
+	<!-- Mouse highlighter -->
+	<div id="topmask" class="highlight-mask"></div>
+	<div id="leftmask" class="highlight-mask"></div>
+	<div id="rightmask" class="highlight-mask"></div>
+	<div id="bottommask" class="highlight-mask"></div>
+	<div id="dragmask" class="highlight-drag"></div>
+	
+	<!-- Syntax highlighter javascript --> 
+	<script type="text/javascript" language="javascript" src="scripts/SyntaxHighlighter/scripts/shCore.js"></script> 
+	<script type="text/javascript" language="javascript" src="scripts/SyntaxHighlighter/scripts/shLegacy.js"></script> 
+	<script type="text/javascript" language="javascript" src="scripts/SyntaxHighlighter/scripts/shBrushCpp.js"></script> 
+	<script type="text/javascript" language="javascript" src="scripts/SyntaxHighlighter/scripts/shBrushCSharp.js"></script> 
+	<script type="text/javascript" language="javascript" src="scripts/SyntaxHighlighter/scripts/shBrushCss.js"></script> 
+	<script type="text/javascript" language="javascript" src="scripts/SyntaxHighlighter/scripts/shBrushJScript.js"></script> 
+	<script type="text/javascript" language="javascript" src="scripts/SyntaxHighlighter/scripts/shBrushXml.js"></script> 
+	<script type="text/javascript" language="javascript" src="scripts/SyntaxHighlighter/scripts/shBrushRuby.js"></script> 
+	<script type="text/javascript" language="javascript" src="scripts/SyntaxHighlighter/scripts/shBrushBash.js"></script> 
+	<script type="text/javascript" language="javascript" src="scripts/SyntaxHighlighter/scripts/shBrushPlain.js"></script> 
+	<script type="text/javascript" language="javascript"> 
+		SyntaxHighlighter.all();
+		dp.SyntaxHighlighter.ClipboardSwf = "scripts/SyntaxHighlighter/scripts/clipboard.swf";
+		dp.SyntaxHighlighter.HighlightAll("code");
+	</script>
+	
+	<!-- Google Analytics -->
+	<script type="text/javascript" language="javascript"> 
+		SyntaxHighlighter.all();
+		dp.SyntaxHighlighter.ClipboardSwf = "scripts/SyntaxHighlighter/scripts/clipboard.swf";
+		dp.SyntaxHighlighter.HighlightAll("code");
+	</script>
+	<script type="text/javascript"> 
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script> 
+	<script type="text/javascript"> 
+		try {
+			var pageTracker = _gat._getTracker("UA-9606082-1");
+			pageTracker._trackPageview();
+		} catch (err) { }
+	</script> 
+</body>
+</html>

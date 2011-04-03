@@ -1,0 +1,332 @@
+/*
+	Copyright (c) 2010 Bob Cravens, http://bobcravens.com/ 
+*/
+
+/* CSS Reset
+**************************************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td 
+{
+	background: none repeat scroll 0 0 transparent;
+	border: 0 none;
+	font-size: 100%;
+	margin: 0;
+	outline: 0 none;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+/* Global HTML element styles
+**************************************/
+body 
+{
+	background: #f6f6f6;
+	color: #333;
+	font-family: Verdana,Helvetica,Sans-Serif;
+	font-size: 14px;
+}
+h1, h2, h3, h4, h5, h6, p {	margin-bottom: 20px; }
+h1 { font-size: 32px; }
+h2 { font-size: 28px; }
+h3 { font-size: 24px; }
+h4 { font-size: 18px; }
+h5 { font-size: 14px; }
+h6 { font-size: 12px; }
+
+/* Global CSS classes
+**************************************/
+.hilite-red { color: #ff3333; }
+
+.area
+{
+	margin: 20px 0;
+}
+
+.overlay
+{
+	position: absolute;
+	z-index: 100;
+	top: 50%;
+	left: 50%;
+	font-size: 16px;
+	text-align: center;
+}
+
+.note
+{
+	padding: 20px;	
+	background: transparent url('../images/theme/transBlack75.png') repeat 0 0;
+	color: #fff;
+}
+
+.button
+{
+	border: solid 2px #aaa;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background-color: #89ba38;
+	color: #000;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 18px;
+	margin: 10px 3px;
+	padding: 10px;
+	display: inline-block;
+	width: 100%;
+}
+.button:hover
+{
+	background-color: #acea11;
+}
+
+.width10 { width: 10%; }
+.width20 { width: 20%; }
+.width25 { width: 25%; }
+.width30 { width: 30%; }
+.width40 { width: 40%; }
+.width50 { width: 50%; }
+.width60 { width: 60%; }
+.width70 { width: 70%; }
+.width75 { width: 75%; }
+.width80 { width: 80%; }
+.width90 { width: 90%; }
+
+
+.border
+{
+	border: solid 1px #333;
+	padding: 10px;
+}
+.rounded
+{
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+
+}
+.rounded-top
+{
+	-moz-border-radius-topleft: 20px;
+	-webkit-border-top-left-radius: 20px;
+	-moz-border-radius-topright: 20px;
+	-webkit-border-top-right-radius: 20px;
+}
+
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; }
+
+.page-width
+{
+	width: 900px;
+}
+
+.syntaxhighlighter { font-size: 16px; }
+
+.slideshow
+{
+	background: transparent url('../images/theme/transBlack75.png') repeat 0 0;
+	border: solid 1px #000;
+	padding: 20px;
+}
+.slideshow img
+{
+	border: solid 3px #fff;
+}
+.slideshow-widget 
+{ 
+	display: inline-block; 
+	width: 100%;
+	margin-bottom: 5px;
+}
+.slideshow ul 
+{ 
+	list-style: none; 
+}
+.slideshow ul li 
+{ 
+	float: left; 
+
+	margin-right: 10px;
+
+}
+.slideshow ul li a 
+{ 
+	color: #ddd; 
+	background-color: #444;
+	border: solid 1px #888;	
+	text-decoration: none;
+	display: inline-block;
+	padding: 1px 5px;;
+}
+.slideshow ul li.selected a
+{
+	color: #fff; 
+	background-color: #111;
+	border: solid 1px #000;		
+}
+.slideshow ul li a:hover
+{
+	color: #fff; 
+	background-color: #222;
+	border: solid 1px #111;	
+}
+.slideshow span#slideshow-title
+{
+	display: block;
+	color: #ddd;
+	font-size: 24px;
+	text-align: center;
+	width: 100%;
+}
+
+.mask
+{
+	background: transparent url('../images/theme/transBlack75.png') repeat 0 0;
+	display: none;
+	position: absolute;
+	z-index: 1000;
+}
+.highlight-mask
+{
+	background: transparent url('../images/theme/transBlack75.png') repeat 0 0;
+	display: none;
+	position: absolute;
+	z-index: 1000;
+}
+.highlight-drag
+{
+	background-color: transparent;
+	border: dashed #ff3333 3px;
+	position: absolute;
+	display: none;
+}
+
+.transBlack25 { background: transparent url('../images/theme/transBlack25.png') repeat 0 0; }
+.transBlack50 { background: transparent url('../images/theme/transBlack50.png') repeat 0 0; }
+.transBlack75 { background: transparent url('../images/theme/transBlack75.png') repeat 0 0; }
+.transWhite25 { background: transparent url('../images/theme/transWhite25.png') repeat 0 0; }
+.transWhite50 { background: transparent url('../images/theme/transWhite50.png') repeat 0 0; }
+.transWhite75 { background: transparent url('../images/theme/transWhite75.png') repeat 0 0; }
+
+/* Individual elements
+**************************************/
+#page-wrap
+{
+	margin: 20px auto 0 auto;
+	min-height: 300px;
+	border: 1px solid #e1e1e1;
+	background-color: #fff;
+	position: relative;
+}
+
+#prevSlide, #nextSlide
+{
+	width: 48px;
+	height: 48px;
+	display: block;
+	text-indent: -9999px;
+}
+#prevSlide, #nextSlide
+{
+	background: #fff url('../images/theme/prevSlide.png') no-repeat 0 0;
+}
+#nextSlide
+{
+	background: #fff url('../images/theme/nextSlide.png') no-repeat 0 0;
+}
+#toc
+{
+	background-color: #000;
+	width: 100px;
+	height: 10px;
+	display: block;
+	text-indent: -9999px;
+}
+#slide-list
+{
+	background-color: #999;
+	width: 250px;
+	height: 300px;
+	left: 325px;
+	display: none;
+	position: absolute;
+	z-index: 2000;
+	overflow-y: scroll;
+}
+#slide-list ul
+{
+	list-style: none;
+}
+#slide-list ul li
+{
+	border-bottom: solid 1px #888;
+}
+#slide-list ul li a
+{
+	color: #333;
+	background-color: #ddd;
+	display: block;
+	text-decoration: none;
+}
+#slide-list ul li a.selected
+{
+	background-color: #fff;
+}
+#slide-list ul li a:hover
+{
+	color: #000;
+	background-color: #fff;
+}
+#title
+{
+	background: transparent url('../images/theme/bg-title-gold.jpg') repeat-x 0 0;
+	height: 24px;
+	padding: 10px 20px;
+	font-size: 24px;
+	line-height: 24px;
+	color: 000;
+}
+
+#title.blue
+{
+	background: transparent url('../images/theme/bg-title-blue.jpg') repeat-x 0 0;	
+}
+#title.green
+{
+	background: transparent url('../images/theme/bg-title-green.jpg') repeat-x 0 0;
+}
+#title.gold
+{
+	background: transparent url('../images/theme/bg-title-gold.jpg') repeat-x 0 0;
+}
+
+#content
+{
+	padding: 20px;
+	font-size: 24px;
+	position: relative;
+	min-height: 400px;
+}
+
+#footer
+{
+	margin: 0 auto;
+	color: #333;
+}
+
+#footer a
+{
+	color: #333;
+	text-decoration: underline;
+}
+
+#footer a:hover
+{
+	color: #000;
+	text-decoration: none;
+}
